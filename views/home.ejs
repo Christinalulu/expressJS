@@ -24,8 +24,9 @@
 		</div>
 		<%- include('./partials/scripts.ejs') %>
 		<script>
-			var typed = new Typed(".aboutMe", {
-				strings: `<%= JSON.stringefy(array) %>`,
+			document.addEventListener('DOMContentLoaded', function(){
+				var typed = new Typed(".aboutMe", {
+				strings: <%- JSON.stringify(array) %>,
 				smartBackspace: true,
 				typeSpeed: 100,
 				backSpeed: 100,
@@ -33,6 +34,7 @@
 				loopCount: Infinity,
 				startDelay: 1000,
 			});
+			})
 		</script>
 	</body>
 </html>
