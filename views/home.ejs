@@ -23,16 +23,17 @@
 			<%- include('./partials/home.ejs') %>
 		</div>
 		<%- include('./partials/scripts.ejs') %>
-    <script>
-      var typed = new Typed(".aboutMe", {
-    strings:  `<%- JSON.stringify(array) %>`,
+		<script>
+
+		 var typed = new Typed(".aboutMe", {
+    strings: `<%= JSON.stringefy(array) %>`,
     smartBackspace: true,
     typeSpeed: 100,
     backSpeed: 100,
     loop: true,
     loopCount: Infinity,
     startDelay: 1000
-});
-    </script>
+  });
+	  </script>
 	</body>
 </html>

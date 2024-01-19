@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 const fs = require("fs")
@@ -7,6 +8,9 @@ const path = require("path")
 router.get('/', function(req, res, next) {
   let data = fs.readFileSync(path.resolve(__dirname, "../data/introductionArray.json"));
   res.render('index', { title: 'Express' , array: JSON.parse(data)});
+  res.render('recommendations', { data: JSON.parse(data)
+  });
 });
+
 
 module.exports = router;
