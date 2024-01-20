@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' , array: JSON.parse(data)});
   res.render('recommendations', { data: JSON.parse(data)
   });
+  res.render('portfolio', { cakes: JSON.parse(data)});
 });
 
 
